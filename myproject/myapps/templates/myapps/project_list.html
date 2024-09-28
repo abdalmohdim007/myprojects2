@@ -1,0 +1,44 @@
+{% extends "myapps/base.html" %}
+    {% block title %}Project List{% endblock %}
+    
+
+    {% block content %}
+    <div class="container mt-8">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <!-- Iterate over object_list -->
+                            {% for object in object_list %}
+
+                            <!-- Display Objects -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>{{ object.name }}</span>
+                                
+                                    <a class="btn btn-primary btn-sm" href="{{ object.pk }}/update">Update</a>
+                                    <a class="btn btn-success btn-sm" href="{{ object.pk }}/detail">Details</a>
+                                    <a class="btn btn-danger btn-sm" href="{{ object.pk }}/delete">Delete</a>
+                                
+                            </li>
+                            <hr/>
+                            <!-- If object_list is empty -->
+                            {% empty %}
+                            <li>No objects yet.</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="http://nolink.html" class="btn btn-secondary">:)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% endblock %}
+    
+

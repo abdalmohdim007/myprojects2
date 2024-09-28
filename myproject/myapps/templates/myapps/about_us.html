@@ -1,0 +1,45 @@
+{% extends "myapps/base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="container about-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <h2 class="header-title text-center">About My Project Portfolio</h2>
+                    <p class="text-muted text-center">A hub for all my Django creations!</p>
+                    <hr>
+                    <p>
+                        Welcome to <strong>My Project Portfolio</strong>, a dedicated platform where I showcase the Django projects I've built. 
+                        This site is designed to provide an overview of the diverse applications I've created, each project reflecting my passion for 
+                        programming and problem-solving.
+                    </p>
+                    <p>
+                        From HR management systems to travel reservation apps, my portfolio highlights a variety of projects that solve real-world problems. 
+                        For each project, you'll find detailed descriptions, key features, and the technologies used. Whether it's a simple to-do list app, 
+                        a strategy management system, or a quick CV generator, every project is structured to demonstrate my skills in Django, Bootstrap, and 
+                        database integration.
+                    </p>
+                    <p>
+                        My goal is to continue improving and expanding this collection of projects. Each new application pushes the boundaries of what I can 
+                        achieve as a developer. Feel free to explore, learn from, or even use these applications for your own purposes. All projects are 
+                        documented to provide insight into their functionality, and I'm always open to feedback and collaboration.
+                    </p>
+                    <p>
+                        Whether you're a potential employer, collaborator, or fellow developer, this site is your gateway to my journey as a developer. 
+                        Explore my work and see how I'm growing my skills with each new project!
+                    </p>
+                    
+                    <p class="text-center mt-4">
+                        <a href="{% url 'project_create' %}" class="btn btn-primary">Add a project</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+

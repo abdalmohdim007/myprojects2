@@ -1,0 +1,14 @@
+{% extends "myapps/base.html" %}
+    {% block title %} Task Details{% endblock %}
+    
+
+    {% block content %}
+    <div class="card-header bg-primary text-white text-center">
+        <h2> Task Details</h2>
+    </div>
+    <h5>Name: {{ object.name }}</h5>
+    <p>Description: {{ object.assigned_to }}</p>
+    <p>Pillar: {{ object.status }}</p>
+    
+{% endblock %}
+
